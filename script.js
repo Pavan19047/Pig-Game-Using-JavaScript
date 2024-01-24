@@ -25,10 +25,18 @@ const init = () => {
   score0El.textContent = score1El.textContent = 0
   current0El.textContent = current1El.textContent = 0
   diceEl.classList.add('hidden')
-  player0El.classList.remove('player-winner')
-  player1El.classList.remove('player-winner')
-  player0El.classList.add('player-active')
-  player1El.classList.remove('player-active')
+  player0El.classList.remove('player--winner')
+  player1El.classList.remove('player--winner')
+  player0El.classList.add('player--active')
+  player1El.classList.remove('player--active')
+
+
+  // player0El.classList.remove('player-winner')
+  // player1El.classList.remove('player-winner')
+
+  // // Set the active player
+  // player0El.classList.add('player-active')
+  // player1El.classList.remove('player-active')
 }
 init()
 
@@ -48,7 +56,7 @@ const rollDice = () => {
     const roll = Math.trunc(Math.random() * 6) + 1
 
     diceEl.classList.remove('hidden')
-    diceEl.src = `dice-${roll}.png`
+    diceEl.src = `./images/dice-${roll}.png`
 
     if (roll !== 1) {
       currentScore += roll
@@ -65,7 +73,7 @@ const addScore = () => {
     scores[activePlayer] += currentScore
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer]
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 20) {
       playing = false
       diceEl.classList.add('hidden')
       document
