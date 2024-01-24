@@ -20,9 +20,7 @@
 * [x] Doing TDD is not mandatory. :warning:
 * [x] The game will be available on a GitHub Pages :rocket:
 * [x] The resources will be available in the **images** folder
-* Resources :
-  - LATO font
-  - CSS framework
+
 ---
 
 #### :construction: TODO :construction::
